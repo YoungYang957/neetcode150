@@ -1,0 +1,39 @@
+
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        new_list = sorted(nums)
+
+        if not new_list:
+            return False
+
+
+        for i in range(len(new_list)-1):
+            if new_list[i] != new_list[i+1]:
+                continue
+            
+            else:
+                return True
+
+        return False
+
+# the first solution will only return if the first and second element in the list is the same or not
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        new_list = sorted(nums)
+
+        if not new_list:
+            return False
+
+
+        for i in range(len(new_list)-1):
+            if new_list[i] != new_list[i+1]:
+                continue
+            
+            else:
+                return True
+
+        return False
