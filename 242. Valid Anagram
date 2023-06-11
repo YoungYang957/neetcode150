@@ -1,0 +1,15 @@
+# two takes: the first is to use list function to split word to letters and the second one is u can use sorted with letters
+
+
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+
+        new_s = sorted(list(s))
+        new_t = sorted(list(t))
+
+        if new_s == new_t :
+            return True
+        else:
+            return False
