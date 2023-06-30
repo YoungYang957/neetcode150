@@ -1,0 +1,19 @@
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        """
+        use a dic
+        """
+
+        str_dic = defaultdict(list)
+
+        for s in strs:
+            count = [0]*26
+
+            for letter in s:
+                # using 26 slot to represent the 26 letters
+                count[ord(letter)-ord("a")] +=1
+            #group the string with the same letter frequency together
+            str_dic[tuple(count)].append(s)
+
+
+        return str_dic.values()
